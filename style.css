@@ -97,6 +97,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .PurchaseButton
@@ -113,4 +114,12 @@ body{
 {
     border: 2px solid black;
     border-radius: 10rem;
+}
+
+footer
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
 }
