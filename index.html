@@ -19,11 +19,14 @@
             </nav>
         </header>
 
-        <div class="centerImage"><img src = "src/Parking App Banner.jpg" class="parkBanner" alt ="Parking Banner" title="MetaPark Banner"> </div>
+        <div class="centerImage">
+            <img src = "src/Parking App Banner.jpg" class="parkBanner" alt ="Parking Banner" title="MetaPark Banner">
+        </div>
 
         <form id="EmpRegForm" method="post">
-            <h2>Employee Registration</h2>
-            
+            <details>
+            <summary>Employee Registration</summary>
+            <div class="CollapsibleForm">
             <div>
             <label for = "fullName">Full Name: </label>
             <input type="text" id = "fullName" name = "fName" placeholder="Enter Your Name Here" required>
@@ -76,13 +79,17 @@
             <div>
             <input type="submit" id="submitButton" name = "SubmitButton" value="Submit">
             </div>
+        </div>
+        </details>
         </form>
 
         <br>
         
         <form id="VehicleRegForm"  method="post">
-            <h2>Vehicle Registration</h2>
+            <details>
+            <summary>Vehicle Registration</summary>
 
+            <div class="CollapsibleForm">
             <div>
             <label for = "VehicleCompany">Vehicle Manufacturer: </label>
             <input type="text" id = "VehicleCompany" name = "Vehicle Manufacturer" placeholder="Enter Name of Vehicle Manufacturer" required>
@@ -137,11 +144,12 @@
             <div>
             <input type="submit" value="Submit">
             </div>
+            </div>
+        </details>
         </form>
 
         <form id="FeedbackForm" method="post">
-            <h2>Feedback Form</h2>
-            
+            <h3>Feedback Form</h3>
             <div>
             <label for = "fullNameFeedback">Full Name: </label>
             <input type="text" id = "fullNameFeedback" name = "fName" placeholder="Enter Your Name Here" required>
@@ -179,6 +187,7 @@
             <div>
             <input type="submit" id="submitButton" name = "SubmitButton" value="Submit">
             </div>
+        
         </form>
 
         <div id="Pricing">
