@@ -152,6 +152,20 @@ summary
     border-radius: 10rem;
 }
 
+.carGifDiv
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.carGIF
+{
+    border: 2px solid rgb(7, 132, 205);
+    border-radius: 8px;
+}
+
 footer
 {
     margin-left: 10px;
