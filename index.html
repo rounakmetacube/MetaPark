@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MetaParking</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav class = "navbar">
+                <div class = "navdiv">
+                    <div><img src = "src/car-icon.png" class="logo" alt ="MetaPark logo" title="MetaPark Logo"></div>
+                    <ul>
+                    <li><a href="#EmpRegForm">Add Employee</a></li>
+                    <li><a href="#VehicleRegForm">Add Vehicle</a> </li>
+                    <li><a href="#FeedbackForm">Give Feedback</a></li> 
+                    <li><a href="#Pricing">Pricing</a></li> 
+                    </ul>
+                </div>  
+            </nav>
+        </header>
+
+        <div class="centerImage"><img src = "src/Parking App Banner.jpg" class="parkBanner" alt ="Parking Banner" title="MetaPark Banner"> </div>
+
+        <form id="EmpRegForm" method="post" class="EmployeeRegistrationDiv">
+            <h2>Employee Registration</h2>
+            
+            <div>
+            <label for = "fullName">Full Name: </label>
+            <input type="text" id = "fullName" name = "fName" placeholder="Enter Your Name Here" required>
+            </div>
+            
+            <br>
+            
+            <div>
+            <label for = "genderOption">Gender: </label>
+            <input type="radio" id="genderOption" name = "Gender" required> Male
+            <input type="radio" id="genderOption" name = "Gender" required> Female
+            </div>
+            
+            <br>
+            
+            <div>
+            <label for = "email">Email Address: </label>
+            <input type="email" id = "email" name = "emailAddress" placeholder="Enter Your Email Here" required>
+            </div>
+            
+            <br>
+            
+            <div>
+            <label for = "password">Password: </label>
+            <input type="password" id = "password" name = "password" minlength="7" maxlength="30" placeholder="Enter Your Password Here" required>
+            </div>
+            
+            <br>
+
+            <div>
+            <label for = "confirmPass">Confirm Password: </label>
+            <input type="password" id = "confirmPass" name = "ConfirmPassword" minlength="7" maxlength="30" placeholder="Enter Your Password Here" required>
+            </div>
+            
+            <br>
+            
+            <div>
+            <label for = "phNumber">Contact Number: </label>
+            <input type="number" id = "phNumber" name = "PhoneNumber" minlength="10" maxlength="10"  placeholder="Enter Your Contact Number Here" required>
+            </div>
+            
+            <br>
+
+            <div>
+            <input type="reset" id="resetButton" name = "ResetButton" value="Reset">
+            </div>
+
+            <br>
+            
+            <div>
+            <input type="submit" id="submitButton" name = "SubmitButton" value="Submit">
+            </div>
+        </form>
+
+        <br>
+        
+        <form id="VehicleRegForm"  method="post">
+            <h2>Vehicle Registration</h2>
+
+            <div>
+            <label for = "VehicleCompany">Vehicle Manufacturer: </label>
+            <input type="text" id = "VehicleCompany" name = "Vehicle Manufacturer" placeholder="Enter Name of Vehicle Manufacturer" required>
+            </div>
+            
+            <br>
+
+            <div>
+            <label for = "VehicleModel">Vehicle Model: </label>
+            <input type="text" id = "VehicleModel" name = "Vehicle Model" placeholder="Enter Model of Vehicle" required>
+            </div>
+    
+            <br>
+            
+            <div>
+            <label for = "vehicleType">Vehicle Type: </label>
+            <select id = "vehicleType" name = "VehicleType" required>
+                <option value = "Cycle">Cycle</option>
+                <option value = "MotorCycle">MotorCycle</option>
+                <option value = "FourWheeler">Four Wheeler</option>
+            </select>
+            </div>
+            
+            <br>
+            
+            <div>
+            <label for = "vehicleNumber">Vehicle Number: </label>
+            <input type="text" id = "vehicleNumber" name = "Vehicle Number" placeholder="Enter Vehicle Number" required>
+            </div>
+            
+            <br>
+
+            <div>
+            <label for = "empID">Employee ID: </label>
+            <input type="text" id = "empID" name = "EmployeeID" placeholder="Enter Employee ID" required>
+            </div>            
+            <br>
+            
+            <div>
+            <label for = "identification">Enter Identification Details: </label>
+            <input type="text" id = "identification" name = "identification"  placeholder="Color, mark,visible accessory etc" required>
+            </div>
+            
+            <br>
+
+            <div>
+            <input type="reset" value="Reset">
+            </div>
+
+            <br>
+            
+            <div>
+            <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <form id="FeedbackForm" method="post">
+            <h2>Feedback Form</h2>
+            
+            <div>
+            <label for = "fullNameFeedback">Full Name: </label>
+            <input type="text" id = "fullNameFeedback" name = "fName" placeholder="Enter Your Name Here" required>
+            </div>
+
+            <br>
+            
+            <div>
+            <label for = "emailFeedback">Email Address: </label>
+            <input type="email" id = "emailFeedback" name = "emailAddress" placeholder="Enter Your Email Here" required>
+            </div>
+            
+            <br>
+            
+            <div>
+            <label for = "subjectFeedback">Subject: </label>
+            <input type="text" id = "subjectFeedback" name = "subject" placeholder="Subject" required>
+            </div>
+            
+            <br>
+
+            <div>
+            <label for = "feedbackMessage">Feedback: </label>
+            <input type="text" id = "feedbackMessage" name = "FeedbackMessage" placeholder="Message" required>
+            </div>
+            
+            <br>
+
+            <div>
+            <input type="reset" id="resetButton" name = "ResetButton" value="Reset">
+            </div>
+
+            <br>
+            
+            <div>
+            <input type="submit" id="submitButton" name = "SubmitButton" value="Submit">
+            </div>
+        </form>
+
+        <div id="Pricing">
+            <div class = "PricingPlans">
+            <div>
+                <h3>Cycle</h3>
+            </div>
+            <div class="PricePerMonth">
+                <h2>$100</h2>
+                <h4>/Month</h4>
+            </div>
+            <div>
+                <h5>$5 Daily</h5>
+                <h5>$100 Monthly</h5>
+                <h5>$500 Yearly</h5>
+            </div>
+            <div>
+                <input type="button" class="PurchaseButton" name = "PurchaseButton" value="Purchase">
+            </div>
+            </div>
+        </div>
+
+        <div class = "PricingPlans">
+            <div>
+                <h3>MotorCycle</h3>
+            </div>
+            <div class="PricePerMonth">
+                <h2>$100</h2>
+                <h4>/Month</h4>
+            </div>
+            <div>
+                <h5>$10 Daily</h5>
+                <h5>$200 Monthly</h5>
+                <h5>$1000 Yearly</h5>
+            </div>
+            <div>
+                <input type="button" class="PurchaseButton" name = "PurchaseButton" value="Purchase">
+            </div>
+        </div>
+
+        <div class = "PricingPlans">
+            <div>
+                <h3>Four Wheelers</h3>
+            </div>
+            <div class="PricePerMonth">
+                <h2>$500</h2>
+                <h4>/Month</h4>
+            </div>
+            <div>
+                <h5>$20 Daily</h5>
+                <h5>$500 Monthly</h5>
+                <h5>$3500 Yearly</h5>
+            </div>
+            <div>
+                <input type="button" class="PurchaseButton" name = "PurchaseButton" value="Purchase">
+            </div>
+        </div>
+
+    </body>
+    </html>
