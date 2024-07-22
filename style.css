@@ -92,6 +92,30 @@ summary
     color:#0F67B1;
 }
 
+.ButtonSeperator
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redButton 
+{
+    background-color: hsl(0, 100%, 65%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 7px 20px;
+    border: none;
+}
+
+.greenButton 
+{
+    background-color: hsl(147, 88%, 42%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 7px 20px;
+    border: none;
+}
+
 #Pricing
 {
     display: flex;
@@ -114,11 +138,11 @@ summary
 
 .PurchaseButton
 {
-    background-color: white;
+    background-color: rgb(17, 135, 190);
     font-size: 1.5rem;
-    color:#0F67B1;
-    border-radius: 0.6rem;
-    border-color: #0F67B1;
+    color:#ffffff;
+    border-radius: 6px;
+    border-color: #ffffff;
 }
 
 
