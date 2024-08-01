@@ -31,11 +31,13 @@ function NextStep()
             input = document.getElementById("step" + (counter + 1));
             ActivateNextBlock();
             break;
-            
-        default:
-            input = document.getElementById("step" + (counter + 1));
-            ActivateNextBlock();
+        case 12:
+            document.getElementById("Pricing").style.display = "flex";
             break;
+        default:
+                input = document.getElementById("step" + (counter + 1));
+                ActivateNextBlock();
+                break;
     }
 }
 

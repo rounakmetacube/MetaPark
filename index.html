@@ -82,48 +82,47 @@
             <div class="CollapsibleForm">
             <div id="step7" style="display: none;">
             <label for = "VehicleCompany">Vehicle Manufacturer: </label>
-            <input type="text" id = "VehicleCompany" name = "Vehicle Manufacturer" placeholder="Enter Name of Vehicle Manufacturer" required>
+            <input type="text" id = "VehicleCompany" name = "Vehicle Manufacturer" placeholder="Enter Name of Vehicle Manufacturer" required onchange="NextStep()">
             </div>
             
-            <br>
+            
 
             <div id="step8"  style="display: none;">
             <label for = "VehicleModel">Vehicle Model: </label>
-            <input type="text" id = "VehicleModel" name = "Vehicle Model" placeholder="Enter Model of Vehicle" required>
+            <input type="text" id = "VehicleModel" name = "Vehicle Model" placeholder="Enter Model of Vehicle" required onchange="NextStep()">
             </div>
     
-            <br>
+            
             
             <div id="step9"  style="display: none;">
             <label for = "vehicleType">Vehicle Type: </label>
-            <select id = "vehicleType" name = "VehicleType" required>
+            <select id = "vehicleType" name = "VehicleType" required onchange="NextStep()">
                 <option value = "Cycle">Cycle</option>
                 <option value = "MotorCycle">MotorCycle</option>
                 <option value = "FourWheeler">Four Wheeler</option>
             </select>
             </div>
             
-            <br>
+            
             
             <div id="step10"  style="display: none;">
             <label for = "vehicleNumber">Vehicle Number: </label>
-            <input type="text" id = "vehicleNumber" name = "Vehicle Number" placeholder="Enter Vehicle Number" required>
+            <input type="text" id = "vehicleNumber" name = "Vehicle Number" placeholder="Enter Vehicle Number" required onchange="NextStep()">
             </div>
             
-            <br>
+            
 
             <div id="step11"  style="display: none;">
             <label for = "empID">Employee ID: </label>
-            <input type="text" id = "empID" name = "EmployeeID" placeholder="Enter Employee ID" required>
+            <input type="text" id = "empID" name = "EmployeeID" placeholder="Enter Employee ID" required onchange="NextStep()">
             </div>            
-            <br>
+            
             
             <div id="step12"  style="display: none;">
             <label for = "identification">Enter Identification Details: </label>
-            <input type="text" id = "identification" name = "identification"  placeholder="Color, mark,visible accessory etc" required>
+            <input type="text" id = "identification" name = "identification"  placeholder="Color, mark,visible accessory etc" required onchange="NextStep()">
             </div>
             
-            <br>
 
             <div class ="ButtonSeperator" style="display: none;">
             <!--<input type="reset" class = "redButton" value="Reset">-->
