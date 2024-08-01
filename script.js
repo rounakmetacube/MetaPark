@@ -20,8 +20,18 @@ function NextStep()
             input = document.getElementById("step" + (counter + 1));
             ActivateNextBlock();
             break;
-        case 6:
+        case 5:
+            ActivateNextBlock();
             break;
+        case 6:
+            document.getElementById("regSubmitButton").style.display = "none";
+            document.getElementById("regConfirmText").value = "Thank You For Registration ${fullName}";
+            document.getElementById("regConfirmText").style.display = "block";
+            document.getElementById("VehicleRegForm").style.display = "flex";
+            input = document.getElementById("step" + (counter + 1));
+            ActivateNextBlock();
+            break;
+            
         default:
             input = document.getElementById("step" + (counter + 1));
             ActivateNextBlock();
