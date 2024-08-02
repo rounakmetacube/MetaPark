@@ -32,12 +32,18 @@ function NextStep()
             ActivateNextBlock();
             break;
         case 12:
+            alert("Registration Complete. Pick the pricing plan to continue");
+            document.getElementById("vehicleRegConfirmText").value = "Thank You For Registration ${fullName}";
+            document.getElementById("vehicleRegConfirmText").style.display = "block";    
             document.getElementById("Pricing").style.display = "flex";
             break;
         default:
+            if(counter < 12)
+            {
                 input = document.getElementById("step" + (counter + 1));
                 ActivateNextBlock();
                 break;
+            }
     }
 }
 

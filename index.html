@@ -97,6 +97,7 @@
             <div id="step9"  style="display: none;">
             <label for = "vehicleType">Vehicle Type: </label>
             <select id = "vehicleType" name = "VehicleType" required onchange="NextStep()">
+                <option value = " "> </option>
                 <option value = "Cycle">Cycle</option>
                 <option value = "MotorCycle">MotorCycle</option>
                 <option value = "FourWheeler">Four Wheeler</option>
@@ -120,14 +121,17 @@
             
             <div id="step12"  style="display: none;">
             <label for = "identification">Enter Identification Details: </label>
-            <input type="text" id = "identification" name = "identification"  placeholder="Color, mark,visible accessory etc" required onchange="NextStep()">
-            </div>
-            
+            <input type="text" id = "identification" name = "identification"  placeholder="Color, mark,visible accessory etc" required onchange="NextStep()">            
 
-            <div class ="ButtonSeperator" style="display: none;">
+            <div class ="ButtonSeperator">
             <!--<input type="reset" class = "redButton" value="Reset">-->
-            <input type="submit" class= "greenButton" value="Submit">
+            <input type="submit" id="VehicleRegSubmit" class= "greenButton" value="Submit" onsubmit="NextStep()">
             </div>
+        </div>
+
+            <div class="confirmationText" id="vehicleRegConfirmText" style="text-align: center; display: none;">Thanks for Registration</div>
+        </div>
+        <div id="step13"  style="display: none;"></div>
             </div>
         </details>
         </form>
