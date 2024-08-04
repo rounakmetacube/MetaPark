@@ -103,7 +103,7 @@ function NextStep()
             if(nameValidation())
                 {
                     fullName = document.getElementById('fullName').value;
-                    document.getElementById('genderLabelID').innerHTML = "Hello " + fullName + ", Select your gender: ";
+                    document.getElementById('genderLabelID').innerHTML = `Hello ${fullName},Select your gender: `;
                     input = document.getElementById("step" + (counter + 1));
                     ActivateNextBlock();
                 }
@@ -132,7 +132,7 @@ function NextStep()
             if(numberValidation())
             {
                 document.getElementById("regSubmitButton").style.display = "none";
-                document.getElementById("regConfirmText").value = "Thank You For Registration ${fullName}";
+                document.getElementById("regConfirmText").value = `Thank You For Registration ${fullName}`;
                 document.getElementById("regConfirmText").style.display = "block";
                 document.getElementById("VehicleRegForm").style.display = "flex";
                 input = document.getElementById("step" + (counter + 1));
@@ -142,7 +142,7 @@ function NextStep()
         case 12:
             document.getElementById("step" + counter).style.display = "none";
             alert("Registration Complete. Pick the pricing plan to continue");
-            document.getElementById("vehicleRegConfirmText").value = "Thank You For Registration ${fullName}";
+            document.getElementById("vehicleRegConfirmText").value = `Thank You For Registration ${fullName}`;
             document.getElementById("vehicleRegConfirmText").style.display = "block";    
             document.getElementById("Pricing").style.display = "flex";
             document.getElementById("PricingCurrency").style.display = "block";
