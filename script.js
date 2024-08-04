@@ -145,6 +145,7 @@ function NextStep()
             document.getElementById("vehicleRegConfirmText").value = "Thank You For Registration ${fullName}";
             document.getElementById("vehicleRegConfirmText").style.display = "block";    
             document.getElementById("Pricing").style.display = "flex";
+            document.getElementById("PricingCurrency").style.display = "block";
             break;
         default:
             if(counter < 12)
@@ -177,3 +178,32 @@ passwordField.addEventListener('input',()=>{
         passwordField.style.borderColor = "green";
     }
 })
+
+let currencyDropdown = document.getElementById("currency");
+let currencySignArray = document.getElementsByClassName("currencySign");
+let pricingValueArray = document.getElementsByClassName("priceValue");
+let pricingHolder = document.getElementsByClassName("priceValue");
+currencyDropdown.addEventListener("change", ()=>{
+    switch(currencyDropdown.value)
+    {
+        case "USD":
+            for(let c of currencySignArray)
+            {
+                c.innerHTML = "$";
+            }
+            break;
+        case "INR":
+            for(let c of currencySignArray)
+            {
+               c.innerHTML = "₹";
+            }
+            break;
+       case "JPY":
+            for(let c of currencySignArray)
+            {
+               c.innerHTML = "¥";
+            }
+            break;    
+    }
+})
+

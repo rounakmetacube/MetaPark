@@ -116,6 +116,12 @@ summary
     border: none;
 }
 
+#PricingCurrency
+{
+    text-align: center;
+    font-size: 20px;
+}
+
 #Pricing
 {
     display: flex;

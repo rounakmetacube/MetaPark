@@ -178,19 +178,28 @@
         
         </form>-->
 
-        <div id="Pricing" style="display: none;">
+        <div id="PricingCurrency" style="display: none">
+            <label for = "currency">Currency: </label>
+            <select id = "currency" name = "Currency" required>
+                <option value = "USD">US Dollars</option>
+                <option value = "INR">Indian Rupee</option>
+                <option value = "JPY">Japanese Yen</option>
+            </select>
+            </div>                
+
+        <div id="Pricing" style="display: none">
             <div class = "PricingPlans">
             <div>
                 <h3>Cycle</h3>
             </div>
             <div class="PricePerMonth">
-                <h2>$100</h2>
+                <h2><span class="currencySign">$</span><span class="priceValue">100</span></h2>
                 <h4>/Month</h4>
             </div>
             <div>
-                <h5>$5 Daily</h5>
-                <h5>$100 Monthly</h5>
-                <h5>$500 Yearly</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">5</span> Daily</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">100</span> Monthly</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">500</span> Yearly</h5>
             </div>
             <div>
                 <input type="button" class="PurchaseButton" name = "PurchaseButton" value="Purchase">
@@ -203,13 +212,13 @@
                 <h3>MotorCycle</h3>
             </div>
             <div class="PricePerMonth">
-                <h2>$100</h2>
+                <h2><span class="currencySign">$</span>100</h2>
                 <h4>/Month</h4>
             </div>
             <div>
-                <h5>$10 Daily</h5>
-                <h5>$200 Monthly</h5>
-                <h5>$1000 Yearly</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">10</span> Daily</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">200</span> Monthly</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">1000</span> Yearly</h5>
             </div>
             <div>
                 <input type="button" class="PurchaseButton" name = "PurchaseButton" value="Purchase">
@@ -221,13 +230,13 @@
                 <h3>Four Wheelers</h3>
             </div>
             <div class="PricePerMonth">
-                <h2>$500</h2>
+                <h2><span class="currencySign">$</span><span class="priceValue">500</span></h2>
                 <h4>/Month</h4>
             </div>
             <div>
-                <h5>$20 Daily</h5>
-                <h5>$500 Monthly</h5>
-                <h5>$3500 Yearly</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">20</span> Daily</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">500</span> Monthly</h5>
+                <h5><span class="currencySign">$</span><span class="priceValue">3500</span> Yearly</h5>
             </div>
             <div>
                 <input type="button" class="PurchaseButton" name = "PurchaseButton" value="Purchase">
