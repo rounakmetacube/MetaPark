@@ -132,7 +132,8 @@ function NextStep()
             if(numberValidation())
             {
                 document.getElementById("regSubmitButton").style.display = "none";
-                document.getElementById("regConfirmText").value = `Thank You For Registration ${fullName}`;
+                let regNo = Math.floor(Math.random() * 1001);
+                document.getElementById("regConfirmText").innerHTML = `Your Registration Number is ${regNo}`;
                 document.getElementById("regConfirmText").style.display = "block";
                 document.getElementById("VehicleRegForm").style.display = "flex";
                 input = document.getElementById("step" + (counter + 1));
@@ -142,7 +143,7 @@ function NextStep()
         case 12:
             document.getElementById("step" + counter).style.display = "none";
             alert("Registration Complete. Pick the pricing plan to continue");
-            document.getElementById("vehicleRegConfirmText").value = `Thank You For Registration ${fullName}`;
+            document.getElementById("vehicleRegConfirmText").innerHTML = `Thank You For Registration ${fullName}`;
             document.getElementById("vehicleRegConfirmText").style.display = "block";    
             document.getElementById("Pricing").style.display = "flex";
             document.getElementById("PricingCurrency").style.display = "block";
@@ -201,13 +202,13 @@ const currencyRates = {
     JPY:142.92 
 };
 
-
 let currencyDropdown = document.getElementById("currency");
 let currencySignArray = document.getElementsByClassName("currencySign");
 let monthlyPriceArray = document.getElementsByClassName("monthlyPricing");
 let dailyPriceArray = document.getElementsByClassName("dailyPricing");
 let yearyPriceArray = document.getElementsByClassName("yearlyPricing");
 let circlePriceArray = document.getElementsByClassName("circlePricing");
+
 currencyDropdown.addEventListener("change", ()=>{
     switch(currencyDropdown.value)
     {
