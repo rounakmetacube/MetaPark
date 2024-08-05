@@ -179,10 +179,35 @@ passwordField.addEventListener('input',()=>{
     }
 })
 
+const pricingArray = 
+{
+    cycle:
+    {
+        daily:5, monthly:100, yearly:500
+    },
+    motorcycle:
+    {
+        daily:10, monthly:200, yearly:1000
+    },
+    fourwheeler:
+    {
+        daily:20, monthly:500, yearly:3500
+    }
+};
+
+const currencyRates = {
+    USD:1,
+    INR:83.86, 
+    JPY:142.92 
+};
+
+
 let currencyDropdown = document.getElementById("currency");
 let currencySignArray = document.getElementsByClassName("currencySign");
-let pricingValueArray = document.getElementsByClassName("priceValue");
-let pricingHolder = document.getElementsByClassName("priceValue");
+let monthlyPriceArray = document.getElementsByClassName("monthlyPricing");
+let dailyPriceArray = document.getElementsByClassName("dailyPricing");
+let yearyPriceArray = document.getElementsByClassName("yearlyPricing");
+let circlePriceArray = document.getElementsByClassName("circlePricing");
 currencyDropdown.addEventListener("change", ()=>{
     switch(currencyDropdown.value)
     {
@@ -191,19 +216,49 @@ currencyDropdown.addEventListener("change", ()=>{
             {
                 c.innerHTML = "$";
             }
+            pricingConverter(currencyRates.USD);
             break;
         case "INR":
             for(let c of currencySignArray)
             {
                c.innerHTML = "₹";
             }
+            pricingConverter(currencyRates.INR);
             break;
        case "JPY":
             for(let c of currencySignArray)
             {
                c.innerHTML = "¥";
             }
+            pricingConverter(currencyRates.JPY);
             break;    
     }
-})
+}
+)
+
+function pricingConverter(currencyRate)
+{
+    //Circle Pricing
+    circlePriceArray[0].innerHTML = Math.round(pricingArray['cycle'].monthly*currencyRate);
+    circlePriceArray[1].innerHTML = Math.round(pricingArray['motorcycle'].monthly*currencyRate);
+    circlePriceArray[2].innerHTML = Math.round(pricingArray['fourwheeler'].monthly*currencyRate);
+
+    for(var i=0;i<dailyPriceArray.length;i++){
+        if(i==0){
+            dailyPriceArray[i].innerHTML = Math.round(pricingArray['cycle'].daily*currencyRate);
+            monthlyPriceArray[i].innerHTML = Math.round(pricingArray['cycle'].monthly*currencyRate);
+            yearyPriceArray[i].innerHTML = Math.round(pricingArray['cycle'].yearly*currencyRate);
+        }
+        if(i==1){
+            dailyPriceArray[i].innerHTML = Math.round(pricingArray['motorcycle'].daily*currencyRate);
+            monthlyPriceArray[i].innerHTML = Math.round(pricingArray['motorcycle'].monthly*currencyRate);
+            yearyPriceArray[i].innerHTML = Math.round(pricingArray['motorcycle'].yearly*currencyRate);
+       }
+        if(i==2){
+            dailyPriceArray[i].innerHTML = Math.round(pricingArray['fourwheeler'].daily*currencyRate);
+            monthlyPriceArray[i].innerHTML = Math.round(pricingArray['fourwheeler'].monthly*currencyRate);
+            yearyPriceArray[i].innerHTML = Math.round(pricingArray['fourwheeler'].yearly*currencyRate);
+      }
+    }
+}
 
