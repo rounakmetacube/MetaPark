@@ -117,6 +117,36 @@ function numberValidation()
 }
 
 
+function regFormToClass()
+{
+    switch(counter)
+    {
+        case 7:
+            emp_vehicle.brand = document.getElementById("VehicleCompany").value;
+            NextStep();
+            break;
+        case 8:
+            emp_vehicle.model = document.getElementById("VehicleModel").value;
+            NextStep();
+            break;
+        case 9:
+            emp_vehicle.type = document.getElementById("vehicleType").value;
+            NextStep();
+            break;
+        case 10:
+            emp_vehicle.vehicleNumber = document.getElementById("vehicleNumber").value;
+            NextStep();
+            break;
+        case 11:
+            emp_vehicle.empID = document.getElementById("empID").value;
+            NextStep();
+            break;
+        case 12:
+            emp_vehicle.identification = document.getElementById("identification").value;
+            NextStep();
+            break;       
+    }
+}
 
 function NextStep()
 {

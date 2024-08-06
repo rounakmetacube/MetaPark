@@ -75,28 +75,28 @@
 
         <br>
         
-        <form id="VehicleRegForm"  method="post" style="display: none;">
+        <form id="VehicleRegForm" method="post" style="display: none;">
             <details>
             <summary>Vehicle Registration</summary>
 
             <div class="CollapsibleForm">
             <div id="step7" style="display: none;">
             <label for = "VehicleCompany">Vehicle Manufacturer: </label>
-            <input type="text" id = "VehicleCompany" name = "Vehicle Manufacturer" placeholder="Enter Name of Vehicle Manufacturer" required onchange="NextStep()">
+            <input type="text" id = "VehicleCompany" name = "Vehicle Manufacturer" placeholder="Enter Name of Vehicle Manufacturer" required onchange="regFormToClass()">
             </div>
             
             
 
             <div id="step8"  style="display: none;">
             <label for = "VehicleModel">Vehicle Model: </label>
-            <input type="text" id = "VehicleModel" name = "Vehicle Model" placeholder="Enter Model of Vehicle" required onchange="NextStep()">
+            <input type="text" id = "VehicleModel" name = "Vehicle Model" placeholder="Enter Model of Vehicle" required onchange="regFormToClass()">
             </div>
     
             
             
             <div id="step9"  style="display: none;">
             <label for = "vehicleType">Vehicle Type: </label>
-            <select id = "vehicleType" name = "VehicleType" required onchange="NextStep()">
+            <select id = "vehicleType" name = "VehicleType" required onchange="regFormToClass()">
                 <option value = " "> </option>
                 <option value = "Cycle">Cycle</option>
                 <option value = "MotorCycle">MotorCycle</option>
@@ -108,24 +108,24 @@
             
             <div id="step10"  style="display: none;">
             <label for = "vehicleNumber">Vehicle Number: </label>
-            <input type="text" id = "vehicleNumber" name = "Vehicle Number" placeholder="Enter Vehicle Number" required onchange="NextStep()">
+            <input type="text" id = "vehicleNumber" name = "Vehicle Number" placeholder="Enter Vehicle Number" required onchange="regFormToClass()">
             </div>
             
             
 
             <div id="step11"  style="display: none;">
             <label for = "empID">Employee ID: </label>
-            <input type="text" id = "empID" name = "EmployeeID" placeholder="Enter Employee ID" required onchange="NextStep()">
+            <input type="text" id = "empID" name = "EmployeeID" placeholder="Enter Employee ID" required onchange="regFormToClass()">
             </div>            
             
             
             <div id="step12"  style="display: none;">
             <label for = "identification">Enter Identification Details: </label>
-            <input type="text" id = "identification" name = "identification"  placeholder="Color, mark,visible accessory etc" required onchange="NextStep()">            
+            <input type="text" id = "identification" name = "identification"  placeholder="Color, mark,visible accessory etc" required onchange="regFormToClass()">            
 
             <div class ="ButtonSeperator">
             <!--<input type="reset" class = "redButton" value="Reset">-->
-            <input type="submit" id="VehicleRegSubmit" class= "greenButton" value="Submit" onsubmit="NextStep()">
+            <input type="submit" id="VehicleRegSubmit" class= "greenButton" value="Submit" onsubmit="regFormToClass()">
             </div>
         </div>
 
