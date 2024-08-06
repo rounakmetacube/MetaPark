@@ -18,7 +18,7 @@ class Employee
     }
 }
 
-class vehicle
+class Vehicle
 {
     brand: string;
     model: string;
@@ -56,3 +56,4 @@ class pass
         this.vehicleNumber = vehicleNumber;
     }
 }
+

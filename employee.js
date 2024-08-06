@@ -11,7 +11,7 @@ class Employee {
         this.regID = regID;
     }
 }
-class vehicle {
+class Vehicle {
     constructor(brandName, modelName, typeName, vehicleNum, employeeID, identificationMark) {
         this.brandName = brandName;
         this.modelName = modelName;

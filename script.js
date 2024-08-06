@@ -5,6 +5,7 @@ var counter = 1;
 var fullName;
 
 var emp = new Employee();
+var emp_vehicle = new Vehicle();
 
 input.addEventListener("keypress", function(event)
 {
@@ -113,8 +114,9 @@ function numberValidation()
         alert("Invalid Phone Number");
         return false;
     }
-
 }
+
+
 
 function NextStep()
 {
@@ -123,8 +125,7 @@ function NextStep()
         case 1:
             if(nameValidation())
                 {
-                    fullName = document.getElementById('fullName').value;
-                    document.getElementById('genderLabelID').innerHTML = `Hello ${fullName},Select your gender: `;
+                    document.getElementById('genderLabelID').innerHTML = `Hello ${emp.empName},Select your gender: `;
                     input = document.getElementById("step" + (counter + 1));
                     ActivateNextBlock();
                 }
@@ -170,7 +171,7 @@ function NextStep()
         case 12:
             document.getElementById("step" + counter).style.display = "none";
             alert("Registration Complete. Pick the pricing plan to continue");
-            document.getElementById("vehicleRegConfirmText").innerHTML = `Thank You For Registration ${fullName}`;
+            document.getElementById("vehicleRegConfirmText").innerHTML = `Thank You For Registration ${emp.empName}`;
             document.getElementById("vehicleRegConfirmText").style.display = "block";    
             document.getElementById("Pricing").style.display = "flex";
             document.getElementById("PricingCurrency").style.display = "block";
