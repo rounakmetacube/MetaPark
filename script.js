@@ -3,6 +3,9 @@ var passwordInput = document.getElementById("password").value;
 var input = document.getElementById("step1");
 var counter = 1;
 var fullName;
+
+var emp = new Employee();
+
 input.addEventListener("keypress", function(event)
 {
     if(event.key === "Enter")
@@ -28,7 +31,20 @@ function nameValidation()
         return false;
     }
     else 
-    return true;
+    {
+        emp.empName = nameInput;
+        return true;
+    }
+}
+
+function storingGender()
+{
+    if(document.getElementById('genderOptionMale').checked) {
+        emp.gender = "Male";
+      }
+      else if(document.getElementById('genderOptionFemale').checked) {
+        emp.gender = "Female";
+      }
 }
 
 function emailValidation()
@@ -36,6 +52,7 @@ function emailValidation()
     let emailInput = document.getElementById("email").value;   
     if(emailInput.includes('@') && emailInput.includes("."))
     {
+        emp.email = emailInput;
         return true;
     }
     else
@@ -59,6 +76,7 @@ function passwordValidation()
     
     if (passwordInput.length >= 8 && upperCaseCheck.test(passwordInput) && numberCheck.test(passwordInput) && lowerCaseCheck.test(passwordInput))
     {
+        emp.password = passwordInput;
         return true;
     }
     else
@@ -86,7 +104,10 @@ function numberValidation()
 {
     let phoneNoInput = document.getElementById("phNumber").value;
     if(phoneNoInput.length > 8)
+    {
+        emp.phoneNumber = phoneNoInput;
         return true;
+    }
     else
     {
         alert("Invalid Phone Number");
@@ -108,6 +129,11 @@ function NextStep()
                     ActivateNextBlock();
                 }
             break;
+        case 2:
+                storingGender();
+                input = document.getElementById("step" + (counter + 1));
+                ActivateNextBlock();
+                break;
         case 3:
             if(emailValidation())
             {
@@ -133,6 +159,7 @@ function NextStep()
             {
                 document.getElementById("regSubmitButton").style.display = "none";
                 let regNo = Math.floor(Math.random() * 1001);
+                emp.regID = regNo;
                 document.getElementById("regConfirmText").innerHTML = `Your Registration Number is ${regNo}`;
                 document.getElementById("regConfirmText").style.display = "block";
                 document.getElementById("VehicleRegForm").style.display = "flex";

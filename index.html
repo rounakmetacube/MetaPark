@@ -35,8 +35,8 @@
             
             <div id="step2" style="display: none;">
             <label for = "genderOption" id="genderLabelID">Gender: </label>
-            <input type="radio" id="genderOption" name = "Gender" required onchange="NextStep()"> Male
-            <input type="radio" id="genderOption" name = "Gender" required onchange="NextStep()"> Female
+            <input type="radio" id="genderOptionMale" name = "Gender" required onchange="NextStep()"> Male
+            <input type="radio" id="genderOptionFemale" name = "Gender" required onchange="NextStep()"> Female
             </div>
             
             
@@ -68,7 +68,7 @@
             <input type="submit" id="submitButton" class = "greenButton" name = "SubmitButton" value="Submit" onsubmit="NextStep()">
             </div>
         </div>
-        <div class="confirmationText" id="regConfirmText" style="text-align: center; display: none;">Thanks for Registration</div>
+        <div class="confirmationText" id=" " style="text-align: center; display: none;">Thanks for Registration</div>
         </div>
         </details>
         </form>
@@ -254,6 +254,7 @@
             <div><h3>Made By Rounak Choudhary</h3></div>
         </footer>
 
+        <script src="employee.js" async defer></script>
         <script src="script.js" async defer></script>
     </body>
     </html>
